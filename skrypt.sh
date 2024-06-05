@@ -21,3 +21,13 @@ if [ "$1" == "--init" ]; then
     git clone https://github.com/Kharasymek/LAB3-4NwBIT $(pwd)/projekt
     export PATH=$(pwd)/projekt:$PATH
 fi
+if [[ "$1" == "--error" || "$1" == "-e" ]]; then
+    count=${2:-100}
+    mkdir -p error
+    for i in $(seq 1 $count); do
+        mkdir -p error/error${i}
+        echo "error${i}.txt" > error/error${i}/error${i}.txt
+        echo "Utworzony przez: $0" >> error/error${i}/error${i}.txt
+        date >> error/error${i}/error${i}.txt
+    done
+fi
