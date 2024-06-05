@@ -17,3 +17,7 @@ if [[ "$1" == "--help" || "$1" == "-h" ]]; then
     echo "--logs N, -l N: tworzy N plików logx.txt"
     echo "--help, -h  : wyświetla dostępne opcje"
 fi
+if [ "$1" == "--init" ]; then
+    git clone https://github.com/Kharasymek/LAB3-4NwBIT $(pwd)/projekt
+    export PATH=$(pwd)/projekt:$PATH
+fi
