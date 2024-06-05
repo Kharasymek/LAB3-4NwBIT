@@ -10,3 +10,10 @@ if [ "$1" == "--logs" ]; then
         date >> log${i}.txt
     done
 fi
+if [ "$1" == "--help" ]; then
+    echo "Dostępne opcje:"
+    echo "--date  : wyświetla dzisiejszą datę"
+    echo "--logs  : tworzy 100 plików logx.txt"
+    echo "--logs N: tworzy N plików logx.txt"
+    echo "--help  : wyświetla dostępne opcje"
+fi
